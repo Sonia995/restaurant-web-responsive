@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Restaurante</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/924b459332.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header class="hero-container">
+      <nav>
+        <span aria-label="menu" class="toggle" onclick="menuToggle()"></span>
+        <ul class="menu-nav" onclick="menuToggle()">
+          <li><a href="#menu" data-text="">Nuestro menú</a></li>
+          <li><a href="#footer" data-text="">Donde estamos</a></li>
+          <li><a href="#about" data-text="">Nuestra misión</a></li>
+          <li><a href="#footer" data-text="">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <h1 class="title">Cocina vegana con sabor auténtico</h1>
+        <a href="#" class="hero-button pulsate">Reserva mesa</a>
+      </div>
+    </header>
+
+    <!---Menu Section---=========-->
+    <section class="menu container-fluid" id="menu">
+      <article class="menu-image"></article>
+      <article class="menu-text-container">
+        <div class="menu-text">
+          <h2>Nuestro Menú</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut omnis
+            nam iusto praesentium inventore vitae esse tempora repellendus.
+          </p>
+          <a href="#">Explora</a>
+        </div>
+      </article>
+    </section>
+
+    <!--=======-----------Card Section-----====================-->
+    <section id="food">
+      <div>
+        <h2 class="title-food">Menús para llevar</h2>
+      </div>
+      <div class="food-container container text-center">
+        <div class="card text-bg-dark food-card">
+          <img
+            src="./assets/images/desayuno.jpg"
+            class="card-img food-img"
+            alt="..."
+          />
+          <div class="card-img-overlay">
+            <div class="card-body card-content">
+              <h5 class="card-title">Desayunos</h5>
+              <p class="card-text">Desde 10€</p>
+              <div class="footer-btn">
+                <button type="button" class="food-btn">Pide ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-bg-dark food-card">
+          <img
+            src="./assets/images/foto-cliente (1).jpg"
+            class="card-img food-img"
+            alt="..."
+          />
+          <div class="card-img-overlay">
+            <div class="card-body">
+              <h5 class="card-title">Almuerzos</h5>
+              <p class="card-text">Desde 15€</p>
+              <div class="footer-btn">
+                <button type="button" class="food-btn">Pide ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-bg-dark food-card">
+          <img
+            src="./assets/images/cena.jpg"
+            class="card-img food-img"
+            alt="..."
+          />
+          <div class="card-img-overlay">
+            <div class="card-body">
+              <h5 class="card-title">Cenas</h5>
+              <p class="card-text">Desde 22€</p>
+              <div class="footer-btn">
+                <button type="button" class="food-btn">Pide ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------============Counter / Numbers-===================-->
+    <section id="numbers" class="container-fluid text-center numbers-section">
+      <article class="number">
+        <i class="fas fa-cloud-meatball"></i>
+        <p>50</p>
+        <h3>Ensaladas</h3>
+      </article>
+      <article class="number">
+        <i class="fas fa-cheese"></i>
+        <p>35</p>
+        <h3>Con Queso</h3>
+      </article>
+      <article class="number">
+        <i class="fas fa-pizza-slice"></i>
+        <p>15</p>
+        <h3>Pizzas</h3>
+      </article>
+      <article class="number">
+        <i class="fas fa-ice-cream"></i>
+        <p>40</p>
+        <h3>Postres</h3>
+      </article>
+    </section>
+
+    <!---=====About Section=====-->
+    <section id="about">
+      <h2 class="about-title">Nuestra especialidad</h2>
+
+      <div class="about-container">
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-mug-hot fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Bebidas orgánicas</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-utensils fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Ingredientes de calidad</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-mortar-pestle fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Ingredientes Bio</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-drumstick-bite fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Carnes Blancas</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-fish fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Pescados Frescos</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-text">
+            <i class="fas fa-pepper-hot fa-2xl" style="color: #009f06"></i>
+            <h3 class="about-subtitle">Especias y Picantes</h3>
+            <p class="about-info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Quisquam, temporibus!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Gallery Section====================-->
+    <section id="gallery">
+      <div>
+        <h2 class="title-text">Fotos de Nuestros Clientes</h2>
+      </div>
+      <div id="gallery-center">
+        <article class="gallery-item">
+          <a href="">
+            <img src="./assets/images/foto-cliente (1).jpg" alt="" />
+          </a>
+        </article>
+        <article class="gallery-item image-x">
+          <a href="">
+            <img src="./assets/images/foto-cliente (2).jpg" alt="" />
+          </a>
+        </article>
+        <article class="gallery-item image-y">
+          <a href="">
+            <img src="./assets/images/foto-cliente (3).jpg" alt="" />
+          </a>
+        </article>
+        <article class="gallery-item">
+          <a href="">
+            <img src="./assets/images/foto-cliente (4).jpg" />
+          </a>
+        </article>
+        <article class="gallery-item">
+          <a href="">
+            <img src="./assets/images/foto-cliente (5).jpg" alt="" />
+          </a>
+        </article>
+        <article class="gallery-item">
+          <a href="">
+            <img src="./assets/images/foto-cliente (6).jpg" alt="" />
+          </a>
+        </article>
+        <article class="gallery-item image-z">
+          <a href="">
+            <img src="./assets/images/foto-cliente (2).jpg" alt="" />
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!---footer========-->
+    <footer id="footer" class="footer">
+      <!---Social Icons-->
+      <section id="social-icons" class="container text-center">
+        <a href="#"><img src="./assets/icons/ri--twitter-line.svg" /></a>
+        <a href="#"><img src="./assets/icons/mingcute--facebook-line.svg" /></a>
+        <a href="#"><img src="./assets/icons/lucide--instagram.svg" /></a>
+        <a href="#"
+          ><img src="./assets/icons/ant-design--tik-tok-filled.svg"
+        /></a>
+      </section>
+      <p class="text">
+        <span>Cocina Vegana &copy;</span><span id="copy"> </span>
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
