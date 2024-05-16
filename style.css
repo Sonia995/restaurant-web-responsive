@@ -247,27 +247,31 @@ nav.sticky ul li a {
 
 .about-card {
   flex: 0 0 30%;
-  border: 4px solid var(--bg-acent-color);
+  border: 8px solid var(--bg-acent-color);
   border-radius: 8px;
   padding: 20px;
   text-align: center;
   box-shadow: 18px 21px 8px -10px rgba(0, 0, 0, 0.1);
+  background-color: #000;
 }
 
 .about-subtitle {
   text-transform: capitalize;
   font-size: 1.8em;
   font-weight: 700;
+  color: var(--bg-acent-color);
 }
 
-#about .fas {
-  font-size: 70px;
-  margin: 50px 0;
+#about img {
+  width: 70px;
+  height: 70px;
+  margin: 20px 0;
 }
 
 .about-info {
   margin: 20px auto;
   line-height: 1.5;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -381,9 +385,11 @@ nav.sticky ul li a {
   font-weight: bold;
 }
 
-.number .fas {
-  font-size: 60px;
+.number img {
+  width: 80px;
+  height: 80px;
   margin: 20px 0;
+  color: #fff;
 }
 .number h3 {
   text-transform: uppercase;
