@@ -30,16 +30,16 @@ h2 {
 
 @media (max-width: 991px) {
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
 
 .hero-container {
   text-align: center;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url("./assets/images/hero.jpg") center/cover no-repeat fixed;
-  /* flex-direction: column;*/
+  background: url("./assets/images/hero.jpg") #000 no-repeat fixed;
+  background-position: center;
+  background-size: cover;
   margin-top: auto;
 }
 
@@ -219,6 +219,12 @@ nav.sticky ul li a {
   }
 }
 
+@media (max-width: 991px) {
+  .hero .title {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 520px) {
   .hero {
     width: 100%;
@@ -295,8 +301,9 @@ nav.sticky ul li a {
   background: var(--bg-acent-color);
 }
 .menu-image {
-  background: var(--bg-acent-color) url("./assets/images/burger-vegana.jpg")
-    left / 50% fixed no-repeat;
+  background: url("./assets/images/burger-vegana.jpg") #000 no-repeat fixed;
+  background-position: left;
+  background-size: 50%;
   min-width: 50%;
 }
 
@@ -353,7 +360,7 @@ nav.sticky ul li a {
   }
   .menu-image {
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
     min-width: 100%;
     min-height: 50vh;
   }
@@ -362,9 +369,16 @@ nav.sticky ul li a {
     min-height: 50vh;
   }
   .menu-text h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
+
+
+@media screen and (max-width: 576px) {
+.menu-text {
+ max-width: 300px;
+}}
+
 
 /*==========Numbers/ Counters=======*/
 .numbers-section {
@@ -383,17 +397,21 @@ nav.sticky ul li a {
 .number p {
   font-size: 30px;
   font-weight: bold;
+  color: #fff;
+  margin-bottom: 0px;
 }
 
 .number img {
   width: 80px;
   height: 80px;
   margin: 20px 0;
-  color: #fff;
 }
+
 .number h3 {
   text-transform: uppercase;
+  color: #fff;
 }
+
 @media screen and (min-width: 576px) {
   #numbers {
     display: grid;
@@ -407,9 +425,9 @@ nav.sticky ul li a {
 }
 
 @media screen and (max-width: 576px) {
-  .number .fas {
+  .number img {
     font-size: 30px;
-    margin: 20px 0;
+    margin: 10px 0;
   }
   .number {
     padding: 10px 0;
@@ -444,9 +462,9 @@ nav.sticky ul li a {
   opacity: 1;
 }
 
-.fod-card img {
+.food-card img {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: block;
   transition: transform 4s;
 }
@@ -518,7 +536,11 @@ nav.sticky ul li a {
 #gallery {
   margin: 100px 50px 0;
 }
-.gallery-item img {
+#gallery-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery-item a img {
   display: block;
   width: 100%;
   opacity: 1;
@@ -528,45 +550,48 @@ nav.sticky ul li a {
   opacity: 0.5;
 }
 
-.image-z {
+.one {
   z-index: 2;
   position: relative;
-  top: -300px;
+  bottom: -20px;
+  right: -10px;
 }
-.image-y {
+.six {
   z-index: 2;
   position: relative;
-  bottom: -50px;
+  top: -50px;
   left: -10px;
 }
-
-.image-x {
+.seven {
   z-index: 2;
   position: relative;
-  bottom: -50px;
-  right: 10px;
-}
-@media screen and (min-width: 576px) {
-  #gallery-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  top: -250px;
+  right: -10px;
 }
 
-@media screen and (min-width: 992px) {
-  #gallery-center {
-    grid-template-columns: repeat(3, 1fr);
+
+@media screen and (max-width: 992px) {
+ .seven {
+    top: -150px;
   }
 }
 
 @media (max-width: 576px) {
-  .image-x,
-  .image-z,
-  .image-y {
+  #gallery-center {
+    grid-template-columns: 100%;
+  }
+
+  .one {
     bottom: 0px;
     right: 0px;
-    left: 0px;
+  }
+  .six {
     top: 0px;
+    left: 0px;
+  }
+  .seven {
+    top: 0px;
+    right: 0px;
   }
 }
 /*==========Social Icons====*/
@@ -612,4 +637,10 @@ nav.sticky ul li a {
   font-size: 1em;
   margin-bottom: 0px;
   color: #dedede;
+}
+
+@media (max-width: 576px) {
+  .footer .text {
+    font-size: 0.8em;
+  }
 }
