@@ -1,5 +1,5 @@
 :root {
-  --default-font-family: "Poppins", sans-serif;
+  --default-font-family: "Raleway", sans-serif;
   --headings-font-family: "Bungee outline", sans-serif;
   --bg-acent-color: #009f06;
 }
@@ -51,7 +51,7 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   z-index: 1000;
   transition: 0.5s ease-in-out;
 }
@@ -74,6 +74,8 @@ nav ul li a {
   position: relative;
   text-decoration: none;
   font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-transform: uppercase;
   transition: 0.5s;
   padding: 20px;
@@ -91,20 +93,13 @@ nav.sticky ul li a {
 }
 
 @media (max-width: 991px) {
-  nav,
-  nav.sticky {
-    padding: 20px 50px;
-    z-index: 1000;
-  }
   nav ul li a {
     font-size: 25px;
     margin: 10px;
     text-transform: uppercase;
     font-weight: 600;
   }
-  nav.sticky ul li a {
-    color: #000;
-  }
+
   .menu-nav.active a:hover {
     background-color: #000;
     color: #fff;
@@ -112,27 +107,27 @@ nav.sticky ul li a {
 
   .menu-nav {
     position: fixed;
-    top: 80px;
-    left: -100%;
+    top: -100%;
+    left: 0px;
     display: block;
     padding: 20px;
     text-align: center;
     width: 100%;
     height: 100vh;
-    background: #fff;
-    color: #000;
     transition: 0.5s;
     z-index: 999;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
   .menu-nav.active {
-    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--bg-acent-color);
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
     font-family: var(--headings-font-family);
-    color: #000;
     font-weight: 800;
- }
+  }
 
   .toggle {
     display: block;
@@ -143,6 +138,7 @@ nav.sticky ul li a {
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1000;
   }
   .toggle.active {
     background: url("./assets/icons/material-symbols--close.svg");
@@ -257,7 +253,7 @@ nav.sticky ul li a {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  box-shadow: 18px 21px 8px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background-color: #000;
 }
 
@@ -345,12 +341,12 @@ nav.sticky ul li a {
   background: #000;
   color: #fff;
   cursor: pointer;
-  border: 2px solid #9bcf53;
+  border: 2px solid #009f06;
   margin-top: 10px;
 }
 .menu-text a:hover {
   color: #000;
-  background: #fff;
+  background: #009f06;
   border: none;
 }
 
@@ -373,12 +369,11 @@ nav.sticky ul li a {
   }
 }
 
-
 @media screen and (max-width: 576px) {
-.menu-text {
- max-width: 300px;
-}}
-
+  .menu-text {
+    max-width: 300px;
+  }
+}
 
 /*==========Numbers/ Counters=======*/
 .numbers-section {
@@ -456,6 +451,7 @@ nav.sticky ul li a {
   border-radius: 8px;
   border: 4px solid var(--bg-acent-color);
   height: 300px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .food-card:hover {
@@ -499,10 +495,21 @@ nav.sticky ul li a {
   border: none;
 }
 .food-btn:hover {
-  color: #000;
-  background: #ffff;
-  border: #000;
+  background: #000;
   outline: none;
+}
+
+/*==========Map Section========*/
+
+.mapInfo {
+  text-align: center;
+}
+
+iframe {
+  border-radius: 20px;
+  border: 2px solid #dedede;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.358);
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -569,9 +576,8 @@ nav.sticky ul li a {
   right: -10px;
 }
 
-
 @media screen and (max-width: 992px) {
- .seven {
+  .seven {
     top: -150px;
   }
 }
@@ -628,15 +634,16 @@ nav.sticky ul li a {
 /*==========Footer========*/
 .footer {
   text-align: center;
-  margin-top: 20px;
   padding-bottom: 20px;
   background-color: #000;
+  color: #dedede;
+  width: 100%;
+  padding-top: 20px;
 }
 .footer .text {
   text-transform: uppercase;
   font-size: 1em;
   margin-bottom: 0px;
-  color: #dedede;
 }
 
 @media (max-width: 576px) {
